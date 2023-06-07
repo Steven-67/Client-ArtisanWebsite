@@ -1,0 +1,113 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+body{
+    width: 100%;
+    height: 100%;
+}
+.blank{
+    height: 70px;
+}
+.title{
+    text-align: center;
+    font-size: 72px;
+    height: 40%;
+
+}
+.til{
+	text-align: left;
+	font-size: 56px;
+	margin-left: 150px;
+	margin-top: 0px;
+}
+.comment{
+    text-align: center;
+    height: 40%;
+    margin-top: 140px;
+    font-size: 24px;
+}
+.logo1{
+	margin-top: 0px;
+}
+.com{
+	text-align: left;
+    margin-left: 150px;
+    margin-top: 5px;
+    font-size: 19px;
+}
+.nxt{
+    text-align: center;
+    height: 20%;
+    margin-top: 70px;
+    font-size: 22px;
+    
+}
+.nxt a:hover{
+    color: rgb(245, 245, 250);
+}
+.log{
+	margin-top: 20px;
+	text-align: center;
+}
+
+h1 {
+	margin-top: 0;
+}
+
+form {
+	display: inline-block;
+	text-align: left;
+}
+
+label {
+	display: block;
+	margin-top: 10px;
+	text-align: left;
+}
+
+input[type="email"],
+input[type="password"],
+select {
+	border: none;
+	border-radius: 3px;
+	box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.1);
+	padding: 10px;
+	width: 100%;
+}
+
+input[type="submit"] {
+	background-color: #4CAF50;
+	border: none;
+	border-radius: 3px;
+	color: #fff;
+	cursor: pointer;
+	margin-top: 20px;
+	padding: 10px;
+	width: 100%;
+}
+
+a {
+	color: #4CAF50;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+.log{
+	text-align: left;
+	margin-left: 40px;
+}
+.head{
+	margin-top: 20px;
+	margin-left: 10px;
+	text-align: left;
+	font-size: 20px;
+}
+.nam{
+	margin-top: 20px;
+	margin-left: 10px;
+	text-align: left;
+	font-size: 20px;
+}

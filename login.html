@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ONLINE LINKSER</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body{
+            font-family: 'Times New Roman', Times, serif;
+            background-position: center;
+            background-color: rgb(85, 85, 182);
+            color: whitesmoke;
+        }
+    </style>
+    </head>
+<body>
+	<div class="logo1">
+        <div class="til"><b>ONLINE LINKSER</b></div>
+        <div class="com">SERVICES AVAILABLE</br> TODAY, TOMORROW AND ALWAYS.</br>
+            Access top artisans at the beck of your call.</div>
+    </div>
+    <div class="log">
+		<h1>LOGIN</h1>
+		<form action="/login" method="post">
+			<label for="email">Email:</label>
+			<input type="email" name="email" required>
+			<label for="password">Password:</label>
+			<input type="password" name="password" required>
+			<label for="user-type">I am a:</label>
+			<select name="user-type" required>
+				<option value="">Select</option>
+				<option value="client">Client</option>
+				<option value="artisan">Artisan</option>
+			</select>
+			<input type="submit" value="Login">
+		</form>
+		<p>Don't have an account? <a href="/register">Sign up</a></p>
+		<div class="nxt">
+			<a href="frontp.html">Return to front Page</a>
+		</div>
+	</div>
+</body>
+</html>
