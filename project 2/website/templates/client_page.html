@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>Welcome, {{ user.username }}</h1>
+
+  <h2>Add a Note</h2>
+  <form method="POST" action="{{ url_for('views.client_page') }}">
+    <textarea name="note" rows="5" cols="40"></textarea>
+    <br>
+    <button type="submit">Add Note</button>
+  </form>
+
+  <h2>Your Notes</h2>
+  {% if user.notes %}
+    <ul>
+      {% for note in user.notes %}
+        <li>{{ note.data }}</li>
+      {% endfor %}
+    </ul>
+  {% else %}
+    <p>No notes available.</p>
+  {% endif %}
+
+  <h2>Search Artisans</h2>
+  <form method="GET" action="{{ url_for('views.search_artisans') }}">
+    <input type="text" name="search_query" placeholder="Enter search query">
+    <select name="service">
+      <option value="">All Services</option>
+      <!-- Add the code to dynamically generate service options -->
+    </select>
+    <button type="submit">Search</button>
+  </form>
+
+  <h2>Search Results</h2>
+  <!-- Add your search results here -->
+
+  <h2>Sample Works</h2>
+  <!-- Add the code to display the sample works uploaded by artisans -->
+{% endblock %}

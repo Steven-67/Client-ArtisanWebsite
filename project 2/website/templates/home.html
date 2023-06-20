@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="home-container">
+    <h1>Welcome, {{ user.first_name }}!</h1>
+    {% with messages = get_flashed_messages(category_filter=["error"]) %}
+        {% if messages %}
+        <div class="alert alert-danger" role="alert">
+            {% for message in messages %}
+            {{ message }}
+            {% endfor %}
+        </div>
+        {% endif %}
+    {% endwith %}
+    <div class="registration-buttons">
+        <a href="{{ url_for('auth.client_registration_form') }}" class="btn btn-primary">Client Registration</a>
+        <a href="{{ url_for('auth.artisan_register') }}" class="btn btn-primary">Artisan Registration</a>
+    </div>
+    <form method="POST" action="{{ url_for('views.home') }}">
+        <div class="form-group">
+            <label for="note">Add Note</label>
+            <textarea class="form-control" id="note" name="note" rows="3" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Add Note</button>
+    </form>
+    <div class="previous-works">
+        <h2>Previous Works</h2>
+        <!-- Add the code to display previous works uploaded by clients or artisans -->
+    </div>
+    <div class="reviews-comments">
+        <h2>Reviews and Comments</h2>
+        <!-- Add the code to display reviews and comments -->
+    </div>
+</div>
+
+<style>
+    .home-container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    .registration-buttons {
+        margin-bottom: 20px;
+    }
+</style>
+{% endblock %}

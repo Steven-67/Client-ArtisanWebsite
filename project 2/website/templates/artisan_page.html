@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>Welcome, {{ user.username }}</h1>
+
+  <h2>Add a Note</h2>
+  <form method="POST" action="{{ url_for('views.artisan_page') }}">
+    <textarea name="note" rows="5" cols="40"></textarea>
+    <br>
+    <button type="submit">Add Note</button>
+  </form>
+
+  <h2>Your Notes</h2>
+  {% if user.notes %}
+    <ul>
+      {% for note in user.notes %}
+        <li>{{ note.data }}</li>
+      {% endfor %}
+    </ul>
+  {% else %}
+    <p>No notes available.</p>
+  {% endif %}
+{% endblock %}
